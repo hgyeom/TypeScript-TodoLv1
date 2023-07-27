@@ -1,10 +1,10 @@
 import React from "react";
-import { Props } from "../../../App";
 import * as S from "./Styled.Todo";
 import Card from "../card/Card";
+import { Props, todo } from "../../../model/todos";
 
 type TodoProps = {
-  todoList: Props["todoItem"][];
+  todoList: todo[];
   setTodoList: Props["setTodoList"];
   isDone: boolean;
 };

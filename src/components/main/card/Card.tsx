@@ -1,10 +1,10 @@
 import React from "react";
 import * as S from "./Styled.Card";
-import { Props } from "../../../App";
+import { Props, todo } from "../../../model/todos";
 
 type CardProps = {
-  todo: Props["todoItem"];
-  todoList: Props["todoItem"][];
+  todo: todo;
+  todoList: todo[];
   setTodoList: Props["setTodoList"];
 };
 

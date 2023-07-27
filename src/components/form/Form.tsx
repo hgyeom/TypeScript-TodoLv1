@@ -1,16 +1,15 @@
 import React from "react";
 import * as S from "./Styled.Form";
 import useInput from "../../hooks/useInput";
-import { Props } from "../../App";
 import { v4 as uuid } from "uuid";
+import { Props, todo } from "../../model/todos";
 
 type FormProps = {
-  todoList: Props["todoItem"][];
+  todoList: todo[];
   setTodoList: Props["setTodoList"];
 };
 
 const Form = ({ todoList, setTodoList }: FormProps) => {
-  console.log(setTodoList);
   const [title, onTitleChange] = useInput();
   const [body, onBodyChange] = useInput();
 
@@ -22,7 +21,7 @@ const Form = ({ todoList, setTodoList }: FormProps) => {
       return;
     }
 
-    const newTodo: Props["todoItem"] = {
+    const newTodo: todo = {
       id: uuid(),
       title,
       body,
